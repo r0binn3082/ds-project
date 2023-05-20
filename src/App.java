@@ -1,17 +1,21 @@
+import java.util.*;
 public class App {
     public static void main(String[] args) throws Exception {
-    
-        tree t1 = new tree();
-        t1.insert(new Node(5));
-        t1.insert(new Node(4));
-        t1.insert(new Node(8));
-        t1.insert(new Node(6));
-        t1.insert(new Node(1));
-        t1.insert(new Node(3));
-        t1.insert(new Node(7));
-        t1.insert(new Node(9));
-        t1.insert(new Node(2));
+        
 
-        t1.display();
+
+        Scanner keyboard = new Scanner(System.in);
+        int n = 4;
+        tree t1 = new tree();
+
+        System.out.println("plaease enter the ratio of redudnacy");
+        double x = keyboard.nextDouble();
+
+        System.out.println("enter the values");
+        for (double i = 0.0; (i)/n != x; i++) {
+            t1.insert(new Node(keyboard.nextInt()));
+        }
+
+        
     }
 }
