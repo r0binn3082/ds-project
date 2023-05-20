@@ -1,8 +1,6 @@
 import java.util.*;
 public class App {
     public static void main(String[] args) throws Exception {
-        
-
 
         Scanner keyboard = new Scanner(System.in);
         int n = 4;
@@ -15,7 +13,10 @@ public class App {
         for (double i = 0.0; (i)/n != x; i++) {
             t1.insert(new Node(keyboard.nextInt()));
         }
-
         
+        System.out.println("redudncy = " + x);
+        if(x<0){
+            System.out.println("Many repitions");
+        }else System.out.println("only few repitions");
     }
 }
