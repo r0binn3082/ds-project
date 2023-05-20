@@ -12,18 +12,18 @@ public class App {
         double x = keyboard.nextDouble();
 
         System.out.println("enter the values");
-        for (i = 0.0; (i)/n != x; i++) {
+        for (i = 0.0; (i)/n <= x; i++) {
             value = keyboard.nextInt();
             t1.insert(new Node(value));
             if (value == -1) {
-                System.out.println("ratio ="+ i + "/" + n + " = " + i/n );
+                System.out.println("ratio ="+ (int) i + "/" + n + " = " + i/n );
                 System.out.println("only a few repitions");
                 break;
             }
         }
 
         if(value != -1){
-            System.out.println("ratio = " + i +"/" + n + " = " + x);
+            System.out.println("ratio = " + (int) i +"/" + n + " = " + x);
             System.out.println("many repition");
         }
     }
