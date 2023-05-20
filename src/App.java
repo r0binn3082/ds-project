@@ -2,21 +2,29 @@ import java.util.*;
 public class App {
     public static void main(String[] args) throws Exception {
 
+        int value = 0;
         Scanner keyboard = new Scanner(System.in);
         int n = 4;
         tree t1 = new tree();
+        double i;
 
         System.out.println("plaease enter the ratio of redudnacy");
         double x = keyboard.nextDouble();
 
         System.out.println("enter the values");
-        for (double i = 0.0; (i)/n != x; i++) {
-            t1.insert(new Node(keyboard.nextInt()));
+        for (i = 0.0; (i)/n != x; i++) {
+            value = keyboard.nextInt();
+            t1.insert(new Node(value));
+            if (value == -1) {
+                System.out.println("ratio ="+ i + "/" + n + " = " + i/n );
+                System.out.println("only a few repitions");
+                break;
+            }
         }
-        
-        System.out.println("redudncy = " + x);
-        if(x<0){
-            System.out.println("Many repitions");
-        }else System.out.println("only few repitions");
+
+        if(value != -1){
+            System.out.println("ratio = " + i +"/" + n + " = " + x);
+            System.out.println("many repition");
+        }
     }
 }
