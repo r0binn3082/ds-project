@@ -1,6 +1,6 @@
 /*
  * insert
- * wheretoinsert
+ * insertHelper
  * display
 */
 public class tree {
@@ -8,18 +8,18 @@ public class tree {
     Node root;
 
     public void insert(Node node) {
-        root = whereToInsert(root , node);
+        root = insertHelper(root , node);
     }
-    public Node whereToInsert(Node root, Node node) { 
+    private Node insertHelper(Node root, Node node) { 
         if(root == null) {
             root = node;
             return node ;
         }
         else if (node.data < root.data){
-            root.left= whereToInsert(root.left, node);
+            root.left= insertHelper(root.left, node);
         }        
         else{
-            root.right= whereToInsert(root.right, node);
+            root.right= insertHelper(root.right, node);
         }
         return root ;
     }
